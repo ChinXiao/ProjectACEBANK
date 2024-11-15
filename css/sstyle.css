@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.display-flex{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.icon-slide{
+  font-size: 2rem;
+}
+/* navigation-bar */
+.navigation {
+  background-color: #023769;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(75px);
+  box-shadow: 0 0 5px rgb(0, 0, 0);
+  -webkit-backdrop-filter: blur(75px);
+}
+.container-width {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+html {
+  font-size: 62.58%;
+  font-family: "Poppins", serif;
+}
+p {
+  font-size: 1rem;
+}
+li,
+a {
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+}
+.top-page {
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  font-size: 1.5rem;
+}
+.list-down-bar {
+  background-color: #01294d;
+}
+.list-down {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  font-size: 1.2rem;
+  padding: 1rem 4rem;
+}
+.logo {
+  max-width: 250px;
+}
+.logo > img {
+  width: 100%;
+}
+.flag-cam > img {
+  width: 60px;
+  border: 1px solid white;
+}
+.btn{
+  border-radius: 7px;
+  background-color: #023769;
+  color: white;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+.color-aceleda{
+  color: #023769;
+
+}
+/* image slide */
+.container-img {
+  background-color: #023361;
+  position: relative;
+}
+
+.btn-container > button {
+  border-radius: 50%;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  color: #969696ce;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  position: relative;
+  bottom: 250px;
+}
+.btn-container > button:hover {
+  box-shadow: 0 0 20px #fdffce;
+  color: #030303;
+  background-color: #fff4b5;
+}
+.btn-container > button:first-child {
+  position: absolute;
+  z-index: 100;
+  left: 25px;
+}
+.btn-container > button:last-child {
+  position: absolute;
+  z-index: 100;
+  right: 25px;
+}
+.dots-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(50px);
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 100px;
+  padding: 5px 0.5rem;
+  gap: 0.5rem;
+}
+.dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgba(255, 225, 225, 0.3);
+  transition: all 0.2s ease-out;
+}
+.dot.active {
+  width: 40px;
+  border-radius: 100px;
+  background-color: rgba(255, 225, 225, 0.7);
+}
+
+.image-slide > img:not(.active) {
+  left: -100%;
+}
+.image-slide {
+  position: relative;
+  width: 1100px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+.image-slide img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+}
+
+@keyframes nextOut {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes nextIn {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+@keyframes prevOut {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+@keyframes prevIn {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+/* section of download */
+.Download-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(151, 151, 151);
+  width: 850px;
+  margin: 4rem auto;
+}
+
+.gif-down{
+  max-width: 100px;
+}
+.gif-down>img{
+  width: 100%;
+}
+.p-down>p{
+  font-size: 2.5rem;
+  color: #023361;
+}
+.p-vdo>p{
+  border-bottom:2px solid #01294d;
+}
+.list-ace-down{
+  margin-top: 1rem;
+}
+.list-ace-down>p,i{
+  font-size: 1rem;
+  cursor: pointer;
+}
+.list-ace-down>img{
+  width: 15px;
+}
+/* grid of video */
+.grid-2x4{
+  display: grid;
+  grid-template-columns: repeat(2,4fr);
+  gap: 2rem;
+}
+.link-video-ace>img{
+  width: 300px;
+}
+.link-video-ace{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.link-video-ace a{
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+/* main of academic */
+.academic{
+  box-shadow: 0 0 10px gray;
+  border-radius: 10px;
+  padding: 2rem;
+}
+.academic h1,p,h2{
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.display-main{
+  display: flex;
+  gap: 4rem;
+  
+}
+.main-program{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+}
+
+
+
